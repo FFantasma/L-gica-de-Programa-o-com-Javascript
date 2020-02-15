@@ -1,0 +1,21 @@
+<script>
+
+  let primeira = function() {
+    console.log("1 - antes");
+    segunda();
+    console.log("1 - depois ");
+  };
+
+  let segunda = function() {
+    console.log("2 - antes");
+    terceira();
+    console.log("2 - depois");
+  };
+
+  let terceira = function() {
+    console.log("3");
+  };
+
+  primeira();
+
+</script>

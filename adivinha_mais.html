@@ -1,0 +1,24 @@
+<input type="text" id="numero">
+<input type="submit" id="adivinhar" value="Compare com o meu segredo!">
+
+<script>
+  let segredo = Math.round(Math.random() * 5);
+  
+  let caixaDoNumero = document.getElementById("numero");
+  
+  let botaoClicado = function() {
+    if(segredo == caixaDoNumero.value) {
+      alert("Parabéns! Você acertou o número secreto");
+    }
+    else {
+      alert("Infelizmente você errou!");
+    }
+        alert(caixaDoNumero.value);
+
+        caixaDoNumero.value = " ";
+  };
+
+  let botaoAdivinhar = document.getElementById("adivinhar");
+  botaoAdivinhar.onclick = botaoClicado;
+
+</script>

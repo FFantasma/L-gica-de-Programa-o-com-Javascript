@@ -1,0 +1,21 @@
+<script>
+
+
+  let pulaLinha = function() {
+    document.write("<br><hr><br>");
+  };
+
+// esta função mostra uma frase no navegador e pula uma linha.
+  let mostra = function(frase) {
+    document.write(frase);
+    pulaLinha();
+  };
+
+// agora vamos colocar no navegador o ano em que nasci: 
+  let ano = 2020;
+
+  mostra("<big> Eu nasci em: </big> " + (ano - 46));
+  mostra("<big> Danielle em: </big>" + (ano - 40));
+  mostra("<big> Tatiana em: </big>" + (ano - 45));
+
+</script>

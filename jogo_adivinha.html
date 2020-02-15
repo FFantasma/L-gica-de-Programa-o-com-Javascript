@@ -1,0 +1,17 @@
+<script>
+
+  let mostra = function(frase) {
+    document.write(frase);
+  };
+
+  let numeroPensado = Math.round(Math.random() * 10);
+
+  let chute = prompt("Já pensei. Qual você acha que é?");
+    if(chute == numeroPensado) {
+      mostra(`Uau! você acertou, pois eu pensei no ${numeroPensado}`);
+    }
+    else {
+      mostra(`Você erro! Eu tinha pensado no ${numeroPensado}`);
+    }
+    
+</script>

@@ -1,0 +1,21 @@
+<script>
+
+  let numeroPensado = Math.round(Math.random() * 5);
+
+  let numeroDaTentativa = 1;
+  while(numeroDaTentativa <= 3) {
+    let chute = prompt("Qual número você acha que é?");
+
+    if(chute == numeroPensado) {
+      alert("Parabéns, você acertou!");
+      // break;
+
+    } else {
+      alert("Você errou. Será que ainda tem mais tentativas?");
+       
+    }
+
+    numeroDaTentativa++;
+  }
+
+</script>

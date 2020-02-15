@@ -1,0 +1,44 @@
+<script>
+
+  let pulaLinha = function() {
+    document.write("<br>");
+  };
+
+  let mostra = function(frase) {
+    document.write(frase);
+    pulaLinha();
+  }
+
+  let calculaIMC = function(altura, peso) {
+    let imc = peso / (altura * altura);
+    return imc; 
+  };
+
+  let nome = prompt("Bom dia, Qual o seu nome?");
+  let alturaDoUsuario = prompt(`${nome} qual é a sua altura?`);
+  let pesoDoUsuario = prompt("E o seu peso?");
+
+  let imcDoUsuario = calculaIMC(alturaDoUsuario, pesoDoUsuario);
+  mostra("O seu imc é: " + (imcDoUsuario).toFixed(2));
+
+  if(imcDoUsuario < 18.5) {
+    mostra("Seu IMC indica que você esta ABAIXO do peso.");
+  } 
+
+  if(imcDoUsuario >= 18.5 && imcDoUsuario <= 24.9) {
+    mostra("Seu IMC indica que você esta NORMAL");
+  }
+
+  if(imcDoUsuario >= 25 && imcDoUsuario <= 29.9) {
+    mostra("Seu IMC indica que você esta no SOBREPESO");
+  }
+
+  if(imcDoUsuario >= 30 && imcDoUsuario <= 39.9) {
+    mostra("Seu IMC indica que você esta OBESO(A)");
+  }
+
+  if(imcDoUsuario > 40) {
+    mostra("Seu IMC indica que você esta ACIMA do peso.");
+  }
+
+</script>

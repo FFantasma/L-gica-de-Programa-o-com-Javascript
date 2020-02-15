@@ -1,0 +1,43 @@
+<!-- Este é um exercício difícil! Você deve sortear 6 números de 1 a 60 e guardar numa
+array. Depois peça para o usuário dizer 6 números, umde cada vez (pode usarum
+prompt ou um input) e guarde-os em uma outra array. Aí diga quantos números
+ele acertou. Sim, é a loteria certinha desta vez!
+Tente acertar os 6 números. Depois faça as contas de quantas chances você tem
+de acertar todos os 6. Você nunca mais vai jogar na loteira! -->
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input type="text" id="numero">
+  <input type="submit" id="verificar" value="Adicione e verifique no Bingo!" >
+
+
+  <script>
+
+    let sorteados = [];
+
+    let adicionarSorteado = function() {
+      let numero = document.getElementById("numero").value;
+      for(let i = 0; i < sorteados.length; i++) {
+        if(sorteados[i] == numero) {
+          alert("Número já sorteado");
+          return;
+        }
+      }
+      sorteados.push(numero);
+      console.log(sorteados);
+    };
+
+    let botao = document.getElementById("verificar");
+    botao.onclick = adicionarSorteado;
+
+  </script>
+</body>
+</html>
+

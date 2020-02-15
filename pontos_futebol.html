@@ -1,0 +1,35 @@
+<script>
+  let pulaLinha = function() {
+    document.write("<br>");
+  };
+  
+  let mostra = function(pontos) {
+    document.write(pontos);
+    pulaLinha();
+  };
+
+  let calculaPontos = function() {
+    return (vitorias * 3) + parseInt(empates);
+  };
+
+
+  let vitorias = prompt("Quantos jogos o CDC Futebol Clube venceu?");
+  let empates = prompt("Quantos jogos o CDC Futebol Clube empatou?");
+
+  let pontos = (vitorias * 3) + parseInt(empates);
+
+  if(pontos > 28) {
+    mostra("Nosso time esta indo MELHOR que o livro Velho!");
+  }
+
+  if(pontos < 28) {
+    mostra("Nosso time esta indo PIOR que o Livro Velho!");
+  }
+
+  if(pontos == 28) {
+    mostra("Nosso time esta EMPATADO com o Livro Velho!");
+  }
+
+
+
+</script>
