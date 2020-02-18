@@ -1,0 +1,25 @@
+<canvas id="tela" width="600" height="400"></canvas>
+
+<script>
+    let tela = document.getElementById("tela");
+    let c = tela.getContext("2d");
+
+    c.fillStyle = "blue";
+
+    let funcaoQuadratica = function(x) {
+        return 0.01 * x * x;
+    }
+
+    let desenhaFuncao = function(funcaoMatematica) {
+        for (let x = 0; x < 600; x = x + 1) {
+            let y = funcaoMatematica(x)
+
+            console.log("Para x = " + x + ", o y vale" + y);
+
+            c.beginPath();
+            c.arc(x, 400 - y, 2, 0, 2 * Math.PI);
+            c.fill();
+        }
+    };
+    desenhaFuncao(funcaoQuadratica);
+</script>
